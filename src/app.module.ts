@@ -9,7 +9,7 @@ import { WeatherModule } from './weather/weather.module';
 @Module({
   imports: [
     WeatherModule,
-    ConfigModule.forRoot({ isGlobal: true, envFilePath: '.local.env' }),
+    ConfigModule.forRoot({ isGlobal: true, envFilePath: '.env' }),
     TypeOrmModule.forRootAsync({
       imports: [ConfigModule],
       useFactory: (configService: ConfigService) => ({
